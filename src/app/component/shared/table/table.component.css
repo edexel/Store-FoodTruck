@@ -1,0 +1,10 @@
+.with-th, .with-td{
+    width: 200px;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+table .btn{
+    margin: 2px;
+  }

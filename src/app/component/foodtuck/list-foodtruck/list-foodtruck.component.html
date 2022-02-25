@@ -1,0 +1,58 @@
+<h3>Busca Food Truck</h3>
+
+<div class="row seach">
+    <div class="col-2 col-sm-2">
+        <label>Day::</label>
+        <select class="form-select" id="dayweek" aria-label="Default select example" [(ngModel)]="ngDay">
+            <option value="0">Sunday</option>
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+        </select>
+    </div>
+    <div class="col-4 col-sm-2">
+        <label>Time:</label>
+        <input id="appt-time" type="time" [(ngModel)]="ngTime" name="appt-time">
+    </div>
+    <div class="col-2 col-sm-2">
+        <button (click)="showData()" class="btn btn-success ">Buscar</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4 col-md-4"></div>
+    <div class="col-sm-4 col-md-4">
+        <label> <select (change)="changePaging(dataPaging)" [(ngModel)]="dataPaging.take" aria-controls="dtBasicExample"
+                class="custom-select custom-select-sm form-control form-control-sm">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </label>
+        <label> of {{dataPaging.total}} - page </label>
+        <input type="number" [(ngModel)]="dataPaging.page" value="{{dataPaging.page}}"
+            (change)="changePaging(dataPaging)" min="1" max="{{dataPaging.pageTotal}}"><label> of
+            {{dataPaging.pageTotal}}</label>
+    </div>
+    <div class="col-sm-4 col-md-4"></div>
+</div>
+
+
+<div class="row">
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="with-th" *ngFor="let key of colGrid">{{key.header}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of dataGrid">
+                <td class="with-td" *ngFor="let key of colGrid">{{record[key.fiel]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

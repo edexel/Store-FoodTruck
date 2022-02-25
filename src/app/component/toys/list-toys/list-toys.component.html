@@ -1,0 +1,77 @@
+<div class="card">
+  <div class="card-header">
+    Jugetes
+  </div>
+  <div class="card-body">
+    <div>
+      <button class="btn btn-primary border" (click)="open(content,0)">Nuevo</button>
+      <button class="btn btn-success" (click)="doExport()">Export csv</button>
+    </div>
+
+    <app-table [ColGrid]="colGrid" [DataGrid]="dataGrid" [DataPaging]="dataPaging" [ButtonTable]="buttonTable"
+      [Modal]="content" (PagingOut)="changePaging($event)" (ButtonOut)="doButtonEvent($event)">
+    </app-table>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{this.titleMOdal}}</h4>
+    <button type="button" class="close" id="modalclose" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="form" errorTailor>
+      <input id="id" formControlName="id" hidden class="form-control">
+      <div class="form-group">
+        <label for="firstname">Nombre</label>
+        <div class="input-group">
+          <input id="nombre" formControlName="nombre" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">Precio</label>
+        <div class="input-group">
+          <input id="precio" formControlName="precio" onkeypress='return event.charCode >= 46 && event.charCode <= 57'
+            class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">Compania</label>
+        <div class="input-group">
+          <input id="compania" formControlName="compania" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">Edad minima</label>
+        <div class="input-group">
+          <input id="edad" formControlName="retriccionEdad"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">Descripción</label>
+        <div class="input-group">
+          <textarea id="descripcíon" formControlName="descripcíon" class="form-control"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">cargar imagen</label>
+        <div class="input-group">
+          <input (change)="LoadImage($event)" type="file">
+        </div>
+      </div>
+      <div *ngIf="archivo != '' || archivo != null">
+        <img [src]="archivo" class="img-fluid" alt="">
+      </div>
+      <div>
+        <button [disabled]="form.invalid" type="button" (click)="send()"
+          class="btn btn-outline-success rigth-ali">Guardar</button>
+      </div>
+    </form>
+    <div class="modal-footer">
+    </div>
+  </div>
+
+</ng-template>

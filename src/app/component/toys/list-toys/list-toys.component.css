@@ -1,0 +1,19 @@
+.btn{
+    margin-right: 10px;
+  }
+
+  .btn{
+    margin-top: 10px;
+  }
+
+  .rigth-ali{
+    float: right!important;
+  }
+
+  input.ng-invalid.ng-touched{
+    border: solid 2px tomato;
+  }
+
+  input.ng-valid.ng-touched{
+    border: solid 2px limegreen;
+  }
