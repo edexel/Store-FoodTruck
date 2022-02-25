@@ -1,32 +1,95 @@
-<<<<<<< HEAD
-# Crudwebapi
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
 # Store-FoodTruck
-aplicación web para administración de inventario para una tienda de “Juguetes”. aplicación web que muestra una lista de camiones de comida que están abiertos
->>>>>>> 75f9ea171c823699e68a8c3cfd4a175907fa462f
+ web para la administración de inventario para una tienda de “Juguetes”.  web que muestra una lista de camiones de comida que están abiertos
+
+
+<div id="top"></div>
+
+
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  
+  <h3 align="center">Web Store</h3>
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary> Contenido</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">Sobre el projecto</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+ 
+  
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+
+Contiene:
+* Web con Crud para un una tienda de juguetes y administrar  los juguetes
+* Web qye muestra listado de camiones de comida Filtrar por dia y hora.
+
+
+
+
+
+
+
+
+
+### Built With
+
+Este Proyecto esta desarrollado con:
+
+* [Angular 13](https://angular.io/)
+
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+
+
+### Prerequisites
+
+* [Angular Nodej v16.14.0](https://nodejs.org/es/)
+* [NPM 8.3.2](https://www.npmjs.com/)
+
+
+<!-- USAGE EXAMPLES -->
+## Installation
+
+Una vez descargado el codigo sera necesario ejecutar los siguientes comandos en la consola de administración de paquetes.
+
+1. Clone the repo [https://github.com/edexel/Store-FoodTruck.git](https://github.com/edexel/Store-FoodTruck.git)
+2. Install NPM packages
+   ```PowerShell
+   npm install
+   ```
+3. start server
+   ```PowerShell
+   npm start
+   ```
+
+
