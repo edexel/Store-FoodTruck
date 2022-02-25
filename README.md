@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Crudwebapi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# Store-FoodTruck
+aplicación web para administración de inventario para una tienda de “Juguetes”. aplicación web que muestra una lista de camiones de comida que están abiertos
+>>>>>>> 75f9ea171c823699e68a8c3cfd4a175907fa462f
